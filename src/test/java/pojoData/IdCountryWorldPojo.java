@@ -1,15 +1,6 @@
 package pojoData;
 
 public class IdCountryWorldPojo {
-   /*
-    {
-            "iso2": "TR",
-            "name": "Turkey",
-            "currency": "TRY",
-            "currency_name": "Turkish lira",
-            "currency_symbol": "���"
-    }
-    */
 
     private String iso2;
 

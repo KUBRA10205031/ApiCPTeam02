@@ -11,7 +11,6 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 public class CountryServices extends BaseURLs {
-   
 
     @Test
     public  void allCountry(){
@@ -20,14 +19,7 @@ public class CountryServices extends BaseURLs {
 
         extentTest.info("URL set edildi ");
 
-
-
-
-        //https://a3m-qa-gm3.quaspareparts.com/auth/api/country
-
        specification.pathParam("countryPath","country");
-
-
 
         extentTest.info("GET methodu ile request gönderildi");
 
@@ -56,23 +48,11 @@ public class CountryServices extends BaseURLs {
         extentTest.info("URL set edildi ");
 
 
-
-
-        //https://a3m-qa-gm3.quaspareparts.com/auth/api/country/TR
-
         specification.pathParams("countryPath","country","TRPath","TR");
 
 
         extentTest.info("Excepted Data oluşturuldu");
-/*
-{
-    "iso2": "TR",
-    "name": "Turkey",
-    "currency": "TRY",
-    "currency_name": "Turkish lira",
-    "currency_symbol": "���"
-}
- */
+
         IdCountryWorldPojo exceptedData=new IdCountryWorldPojo("TR","Turkey","TRY",
                 "Turkish lira","���");
 
@@ -93,10 +73,7 @@ public class CountryServices extends BaseURLs {
 
         extentTest.info("actual data oluşturuldu");
 
-
         IdCountryWorldPojo actualData = response.as(IdCountryWorldPojo.class);
-
-
 
         System.out.println("Actual Data: " + actualData);
 
@@ -112,9 +89,5 @@ public class CountryServices extends BaseURLs {
 
         assertEquals(exceptedData.getCurrency_symbol(),actualData.getCurrency_symbol());
     }
-
-
-
-
 
 }
