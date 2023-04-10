@@ -17,6 +17,7 @@ public class UserStatusServiceData {
 
     }
 
+
     public Map<Object,Object> reqTestDataBody02(){
 
         HashMap<Object,Object> reqBodyData = new HashMap<>();

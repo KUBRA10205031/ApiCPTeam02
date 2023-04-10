@@ -205,6 +205,7 @@ public class UserStatusService extends BaseURLs {
         response.then().assertThat().statusCode(200);
 
         extentTest.info("delete kobtrol edildi");
+        extentTest.info("turgut");
 
     }
 
